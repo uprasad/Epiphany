@@ -15,6 +15,7 @@
 		517FF8B225F42B8F00DE4FB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517FF8B025F42B8F00DE4FB1 /* LaunchScreen.storyboard */; };
 		517FF8BF25F4328900DE4FB1 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517FF8BE25F4328900DE4FB1 /* TopicsViewController.swift */; };
 		517FF8C325F4363700DE4FB1 /* TopicViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517FF8C225F4363700DE4FB1 /* TopicViewCell.swift */; };
+		517FF8C625F4C34F00DE4FB1 /* ConceptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517FF8C525F4C34F00DE4FB1 /* ConceptsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		517FF8B325F42B8F00DE4FB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		517FF8BE25F4328900DE4FB1 /* TopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
 		517FF8C225F4363700DE4FB1 /* TopicViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewCell.swift; sourceTree = "<group>"; };
+		517FF8C525F4C34F00DE4FB1 /* ConceptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConceptsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				517FF8A925F42B8D00DE4FB1 /* ViewController.swift */,
 				517FF8BE25F4328900DE4FB1 /* TopicsViewController.swift */,
 				517FF8C225F4363700DE4FB1 /* TopicViewCell.swift */,
+				517FF8C525F4C34F00DE4FB1 /* ConceptsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				517FF8C325F4363700DE4FB1 /* TopicViewCell.swift in Sources */,
 				517FF8AA25F42B8D00DE4FB1 /* ViewController.swift in Sources */,
 				517FF8A625F42B8D00DE4FB1 /* AppDelegate.swift in Sources */,
+				517FF8C625F4C34F00DE4FB1 /* ConceptsViewController.swift in Sources */,
 				517FF8BF25F4328900DE4FB1 /* TopicsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

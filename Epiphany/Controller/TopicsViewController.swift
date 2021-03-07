@@ -8,12 +8,26 @@
 import UIKit
 
 class TopicsViewController: UICollectionViewController {
-    private let topicNames: [String] = [
-        "One and two dimensional motion",
-        "Forces and Newton's laws of motion",
-        "Centripetal force and gravitation",
-        "Impacts and linear momentum",
-        "Work and energy"
+    private let topicNames: [(String, [String])] = [
+        ("One and two dimensional motion", [
+            "Concept 1",
+            "Concept 2"
+        ]),
+        ("Forces and Newton's laws of motion", [
+            "Concept 3",
+            "Concept 4",
+            "Concept 5"
+        ]),
+        ("Centripetal force and gravitation", [
+            "Concept 6",
+        ]),
+        ("Impacts and linear momentum", [
+            "Concept 7",
+            "Concept 8",
+            "Concept 9"
+        ]),
+        ("Work and energy", [
+        ])
     ]
     
     private let sectionInsets = UIEdgeInsets(
@@ -39,7 +53,7 @@ extension TopicsViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell =   self.collectionView.dequeueReusableCell(withReuseIdentifier: "topicCell", for: indexPath) as! TopicViewCell
         cell.backgroundColor = .white
-        cell.topicLabel.text = self.topicNames[indexPath.row]
+        cell.topicLabel.text = self.topicNames[indexPath.row].0
         
         return cell
     }
@@ -61,5 +75,19 @@ extension TopicsViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return self.sectionInsets.left
+    }
+}
+
+
+extension TopicsViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let cell = sender as? TopicViewCell else { return }
+        guard let indexPath = self.collectionView.indexPath(for: cell) else { return }
+        if segue.identifier == "openTopic" {
+            if let destination = segue.destination as? ConceptsViewController {
+                destination.title = self.topicNames[indexPath.row].0
+                destination.concepts = self.topicNames[indexPath.row].1
+            }
+        }
     }
 }
