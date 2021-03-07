@@ -38,7 +38,8 @@ extension TopicsViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell =   self.collectionView.dequeueReusableCell(withReuseIdentifier: "topicCell", for: indexPath) as! TopicViewCell
-        cell.backgroundColor = .black
+        cell.backgroundColor = .white
+        cell.topicLabel.text = self.topicNames[indexPath.row]
         
         return cell
     }
