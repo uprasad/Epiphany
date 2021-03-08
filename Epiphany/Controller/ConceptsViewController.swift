@@ -30,3 +30,14 @@ extension ConceptsViewController {
         return cell
     }
 }
+
+// MARK: - Segue
+extension ConceptsViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "openConcept" {
+            if let destination = segue.destination as? ViewController {
+                    
+            }
+        }
+    }
+}
